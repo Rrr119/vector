@@ -1,0 +1,47 @@
+data_dir: artifacts/vector-data
+
+sources:
+  pii_in:
+    type: stdin
+    decoding:
+      codec: json
+
+transforms:
+  before_remap:
+    type: remap
+    inputs: [pii_in]
+    source: |
+      .pipeline = "pii-acceptance"
+
+  pii_redact:
+    type: redact
+    inputs: [before_remap]
+    paths:
+      - request.user.profile.name
+      - request.user.profile.email
+      - request.user.profile.ssn
+      - accounts[*].owner.email
+      - accounts[*].token
+      - batches[*][*].card
+      - meta.deep.card
+    strategy: full
+    replacement: "[REDACTED]"
+    consistency_check: true
+    on_violation: audit
+    audit:
+      enabled: true
+      log: false
+      file: artifacts/e2e-audit.jsonl
+
+  after_remap:
+    type: remap
+    inputs: [pii_redact]
+    source: |
+      .redaction_verified = true
+
+sinks:
+  console_out:
+    type: console
+    inputs: [after_remap]
+    encoding:
+      codec: json

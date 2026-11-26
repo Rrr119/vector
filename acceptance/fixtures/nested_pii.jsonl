@@ -1,0 +1,3 @@
+{"event_id":"evt-1","request":{"id":"req-42","user":{"id":"u-7","profile":{"name":"Jane Doe","email":"jane.doe@example.com","ssn":"123-45-6789"}}}}
+{"region":"cn-north","accounts":[{"owner":{"email":"alice@example.com"},"token":"tok-alpha","score":10},{"owner":{"email":"bob@example.com"},"token":"tok-beta","score":20}]}
+{"batch_id":"b-9","batches":[[{"card":"4111-1111-1111-1111","ok":true},{"card":"5555-5555-5555-4444","ok":false}],[{"card":"3782-822463-10005","ok":true}]],"meta":{"deep":{"card":"6011-1111-1111-1117"}}}

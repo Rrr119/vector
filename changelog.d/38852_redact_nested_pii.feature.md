@@ -1,0 +1,3 @@
+The new `redact` transform redacts PII at path based, possibly nested or wildcarded field locations (for example `user.email`, `accounts[*].token`, `batches[*][*].card`, or the recursive `..ssn`). It supports `full`, `mask`, `hash`, `null`, and `remove` strategies, a before/after consistency check that proves non-target fields are unchanged, and a structured audit trail available in memory, as JSON Lines on disk, and through the `vector::transforms::redact::audit` tracing target. The same component is also registered under the `redact_pii` and `pii_redaction` type names for compatibility.
+
+authors: Rrr119

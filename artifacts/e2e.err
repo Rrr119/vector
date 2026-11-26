@@ -1,0 +1,13 @@
+2026-11-26T01:00:29.720942Z  INFO vector::app: Log level is enabled. level="info"
+2026-11-26T01:00:29.723487Z  INFO vector::app: Loading configs. paths=["acceptance/vector-redact-acceptance.yaml"]
+2026-11-26T01:00:29.795945Z  INFO vector::sources::file_descriptors: Capturing stdin.
+2026-11-26T01:00:29.799677Z  INFO vector::topology::running: Running healthchecks.
+2026-11-26T01:00:29.799920Z  INFO vector::topology::builder: Healthcheck passed.
+2026-11-26T01:00:29.800582Z  INFO vector: Vector has started. debug="true" version="0.63.0-dev" arch="x86_64" revision=""
+2026-11-26T01:00:29.803239Z  INFO vector_common::shutdown: All sources have finished.
+2026-11-26T01:00:29.803342Z  INFO vector_common::shutdown: Internal log [All sources have finished.] is being suppressed to avoid flooding.
+2026-11-26T01:00:29.803402Z  INFO vector::app: All sources have finished.
+2026-11-26T01:00:29.803434Z  INFO vector: Vector is stopping.
+2026-11-26T01:00:29.805307Z  INFO vector::topology::running: Shutting down... Waiting on running components. remaining_components="pii_redact, console_out, after_remap" time_remaining="59 seconds left"
+2026-11-26T01:00:29.810530Z  INFO vector: Vector has stopped. reason="none"
+2026-11-26T01:00:29.810669Z  INFO vector::app: All components shut down gracefully.

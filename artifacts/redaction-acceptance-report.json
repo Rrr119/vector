@@ -1,0 +1,31 @@
+{
+  "cases": [
+    {
+      "name": "deep_object",
+      "pii_locations": 3,
+      "audit_records": 3,
+      "consistent": true,
+      "fingerprints_match": true,
+      "leaks": 0
+    },
+    {
+      "name": "object_array",
+      "pii_locations": 4,
+      "audit_records": 4,
+      "consistent": true,
+      "fingerprints_match": true,
+      "leaks": 0
+    },
+    {
+      "name": "nested_arrays",
+      "pii_locations": 7,
+      "audit_records": 7,
+      "consistent": true,
+      "fingerprints_match": true,
+      "leaks": 0
+    }
+  ],
+  "all_pii_processed": true,
+  "non_pii_unchanged": true,
+  "auditable": true
+}

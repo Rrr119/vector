@@ -91,6 +91,7 @@ pub mod net;
 )]
 pub(crate) mod proto;
 pub mod providers;
+pub mod redaction;
 pub mod secrets;
 pub mod serde;
 #[cfg(windows)]
